@@ -1,4 +1,15 @@
-﻿CREATE TABLE [dbo].[Products]
+﻿CREATE TABLE [dbo].[Products](
+	[ProductID] [int] IDENTITY(1,1) NOT NULL,
+	[ProductName] [nvarchar](40) NOT NULL,
+	[SupplierID] [int] NULL,
+	[CategoryID] [int] NULL,
+	[QuantityPerUnit] [nvarchar](20) NULL,
+	[UnitPrice] [money] NULL,
+	[UnitsInStock] [smallint] NULL,
+	[UnitsOnOrder] [smallint] NULL,
+	[ReorderLevel] [smallint] NULL,
+	[Discontinued] [bit] NOT NULL,
+	[rowversion] [timestamp] NULL,
+ CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
 (
-	[Id] INT NOT NULL PRIMARY KEY
-)
+	[ProductID] ASC))

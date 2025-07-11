@@ -62,5 +62,17 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="NortWindOLTP\Schema\Tables\Products.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\Categories.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\Customers.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\CustomerDemographics.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\CustomerCustomerDemo.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\Employees.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\Territories.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\EmployeeTerritories.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\Orders.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\OrderDetails.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\Region.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\Shippers.sql" />
+    <Build Include="NortWindOLTP\Schema\Tables\Suppliers.sql" />
   </ItemGroup>
 </Project>
