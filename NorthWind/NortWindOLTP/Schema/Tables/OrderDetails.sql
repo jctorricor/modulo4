@@ -8,4 +8,6 @@
  CONSTRAINT [PK_Order_Details] PRIMARY KEY CLUSTERED 
 (
 	[OrderID] ASC,
-	[ProductID] ASC))
+	[ProductID] ASC
+	)
+	)
