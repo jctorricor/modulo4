@@ -3,6 +3,7 @@
 	[CompanyName] [nvarchar](40) NOT NULL,
 	[ContactName] [nvarchar](30) NULL,
 	[ContactTitle] [nvarchar](30) NULL,
+	[Age] INT NULL,
 	[Address] [nvarchar](60) NULL,
 	[City] [nvarchar](15) NULL,
 	[Region] [nvarchar](15) NULL,
