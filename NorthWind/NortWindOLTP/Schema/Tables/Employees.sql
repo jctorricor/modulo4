@@ -15,7 +15,7 @@
 	[Extension] [nvarchar](4) NULL,
 	[Photo] [image] NULL,
 	[Notes] [nvarchar](max) NULL,
-	[ReportsTo] [int] NULL,
+	[ReportsTo] [int] NULL CONSTRAINT [FK_Employees_Employees] FOREIGN KEY REFERENCES [Employees] ([EmployeeID]),
 	[PhotoPath] [nvarchar](255) NULL,
 	[rowversion] [timestamp] NULL,
  CONSTRAINT [PK_Employees] PRIMARY KEY CLUSTERED 
