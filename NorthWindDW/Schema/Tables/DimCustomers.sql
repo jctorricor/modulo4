@@ -13,5 +13,8 @@
 	[Country] [nvarchar](15) NULL,
 	[Phone] [nvarchar](24) NULL,
 	[Fax] [nvarchar](24) NULL,
+	-- table CustomerDemographiscs	
+	[CustomerDesc] [nvarchar](max) NULL,
+
 )
 GO
