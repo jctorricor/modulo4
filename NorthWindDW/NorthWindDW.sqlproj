@@ -62,5 +62,6 @@
   <ItemGroup>
     <Build Include="Schema\Tables\DimProducts.sql" />
     <Build Include="Schema\Tables\DimCustomers.sql" />
+    <Build Include="Schema\Tables\DimEmployees.sql" />
   </ItemGroup>
 </Project>
