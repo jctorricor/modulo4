@@ -2,6 +2,7 @@
 (
 	-- table product
 	[ProductSK] [int] IDENTITY(1,1) NOT NULL CONSTRAINT PK_DimProduct PRIMARY KEY,
+	[ProductID] [int] NOT NULL,
 	[ProductName] [nvarchar](40) NOT NULL,
 	[QuantityPerUnit] [nvarchar](20) NULL,
 	[UnitPrice] [money] NULL,
