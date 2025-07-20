@@ -2,9 +2,7 @@
 AS
 Begin
 UPDATE dc
-SET	[EmployeeSK]		= sc.[EmployeeSK],
-	[EmployeeID]		= sc.[EmployeeID],
-	[LastName]			= sc.[LastName],
+SET	[LastName]			= sc.[LastName],
 	[FirstName]			= sc.[FirstName],
 	[Title]				= sc.[Title],
 	[TitleOfCourtesy]	= sc.[TitleOfCourtesy],

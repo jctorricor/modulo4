@@ -4,7 +4,6 @@ BEGIN
 
 	UPDATE dp
 	SET 
-	    [ProductID]      = sp.[ProductID],
         [ProductName]    = sp.[ProductName],
         [QuantityPerUnit]= sp.[QuantityPerUnit],
         [UnitPrice]      = sp.[UnitPrice],

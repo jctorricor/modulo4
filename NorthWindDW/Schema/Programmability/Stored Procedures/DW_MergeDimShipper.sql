@@ -2,8 +2,8 @@
 AS
 BEGIN
 	UPDATE ds
-	SET [CompanyName] = sc.[CompanyName]
-	   ,[Phone]  = sc.[Phone]
+	SET [CompanyName] = sp.[CompanyName]
+	   ,[Phone]  = sp.[Phone]
 	  
 	FROM [dbo].[DimShipper]        ds
 	INNER JOIN [staging].[Shipper] sp ON (ds.[ShipperSK]=sp.[ShipperSK])
