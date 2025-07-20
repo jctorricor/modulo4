@@ -74,7 +74,6 @@
     <Build Include="Schema\Tables\dbo\DimShipper.sql" />
     <Build Include="Schema\Tables\staging\Shipper.sql" />
     <Build Include="Schema\Security\schemas\staging.sql" />
-    <None Include="Schema\Tables\DimDate.sql" />
     <Build Include="Schema\Tables\dbo\DimDate.sql" />
   </ItemGroup>
   <ItemGroup>
