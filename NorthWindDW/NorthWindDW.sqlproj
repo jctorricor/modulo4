@@ -81,6 +81,7 @@
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimShipper.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimEmployee.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeFactOrders.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimProduct.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\Tables\dbo\FactOrders.sql" />
