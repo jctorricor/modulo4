@@ -79,6 +79,7 @@
     <Build Include="Schema\Tables\dbo\DimDate.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimCustomer.sql" />
     <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimShipper.sql" />
+    <Build Include="Schema\Programmability\Stored Procedures\DW_MergeDimEmployee.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Schema\Tables\dbo\FactOrders.sql" />
