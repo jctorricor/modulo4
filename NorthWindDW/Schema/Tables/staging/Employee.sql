@@ -1,6 +1,6 @@
-﻿CREATE TABLE [dbo].[DimEmployees]
+﻿CREATE TABLE [staging].[Employee]
 (
-	[EmployeeSK] [int] IDENTITY(1,1) NOT NULL CONSTRAINT PK_DimEmployees PRIMARY KEY,
+	[EmployeeSK] [int] NOT NULL,
 	[EmployeeID] [int] NOT NULL,
 	[LastName] [nvarchar](20) NOT NULL,
 	[FirstName] [nvarchar](10) NOT NULL,

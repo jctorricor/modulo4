@@ -58,13 +58,26 @@
     <Folder Include="Properties" />
     <Folder Include="Schema" />
     <Folder Include="Schema\Tables" />
+    <Folder Include="Schema\Tables\dbo" />
+    <Folder Include="Schema\Tables\staging" />
+    <Folder Include="Schema\Security" />
+    <Folder Include="Schema\Security\schemas" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Schema\Tables\DimProducts.sql" />
-    <Build Include="Schema\Tables\DimCustomers.sql" />
-    <Build Include="Schema\Tables\DimEmployees.sql" />
-    <Build Include="Schema\Tables\DimDate.sql" />
-    <Build Include="Schema\Tables\DimDate.sql" />
-    <Build Include="Schema\Tables\FactOrders.sql" />
+    <Build Include="Schema\Tables\dbo\DimCustomer.sql" />
+    <Build Include="Schema\Tables\dbo\DimEmployee.sql" />
+    <Build Include="Schema\Tables\dbo\DimProduct.sql" />
+    <Build Include="Schema\Tables\staging\Customer.sql" />
+    <Build Include="Schema\Tables\staging\Employee.sql" />
+    <Build Include="Schema\Tables\staging\Product.sql" />
+    <Build Include="Schema\Tables\staging\Order.sql" />
+    <Build Include="Schema\Tables\dbo\DimShipper.sql" />
+    <Build Include="Schema\Tables\staging\Shipper.sql" />
+    <Build Include="Schema\Security\schemas\staging.sql" />
+    <None Include="Schema\Tables\DimDate.sql" />
+    <Build Include="Schema\Tables\dbo\DimDate.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema\Tables\dbo\FactOrders.sql" />
   </ItemGroup>
 </Project>
