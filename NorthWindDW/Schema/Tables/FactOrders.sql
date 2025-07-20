@@ -5,7 +5,7 @@
 	[OrderDateSK] [int] NOT NULL CONSTRAINT [FK_Orders_OrderDate] FOREIGN KEY([OrderDateSK]) REFERENCES [dbo].[DimDate] ([DateKey]),
 	[RequiredDateSK] [int] NOT NULL CONSTRAINT [FK_Orders_[RequiredDate] FOREIGN KEY(RequiredDateSK) REFERENCES [dbo].[DimDate] ([DateKey]),
 	[ShippedDateSK] [int] NOT NULL CONSTRAINT [FK_Orders_ShippedDate] FOREIGN KEY([ShippedDateSK]) REFERENCES [dbo].[DimDate] ([DateKey]),
-	[ShipperSK] [int] NOT NULL CONSTRAINT [FK_Orders_Shipper] FOREIGN KEY(ShipperSK) REFERENCES [dbo].[DimShippers] ([ShipperSK]),	
+	--[ShipperSK] [int] NOT NULL CONSTRAINT [FK_Orders_Shipper] FOREIGN KEY(ShipperSK) REFERENCES [dbo].[DimShippers] ([ShipperSK]),	
 	[ProductSK] [int] NOT NULL CONSTRAINT [FK_Orders_Product] FOREIGN KEY(ProductSK) REFERENCES [dbo].[DimProducts] ([ProductSK]),
 	[UnitPrice] [money] NOT NULL,
 	[Quantity] [smallint] NOT NULL,
