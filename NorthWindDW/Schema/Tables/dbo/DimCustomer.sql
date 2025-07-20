@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[DimCustomers]
+﻿CREATE TABLE [dbo].[DimCustomer]
 (
 	-- tabla Customers
 	[CustomerSK] [int] IDENTITY(1,1) NOT NULL CONSTRAINT PK_DimCustomer PRIMARY KEY,
