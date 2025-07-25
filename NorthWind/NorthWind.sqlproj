@@ -60,6 +60,8 @@
     <Folder Include="NortWindOLTP\Schema" />
     <Folder Include="NortWindOLTP\Schema\Tables" />
     <Folder Include="Snapshots" />
+    <Folder Include="NortWindOLTP\Schema\Programmability" />
+    <Folder Include="NortWindOLTP\Schema\Programmability\Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="NortWindOLTP\Schema\Tables\Products.sql" />
@@ -75,6 +77,8 @@
     <Build Include="NortWindOLTP\Schema\Tables\Region.sql" />
     <Build Include="NortWindOLTP\Schema\Tables\Shippers.sql" />
     <Build Include="NortWindOLTP\Schema\Tables\Suppliers.sql" />
+    <Build Include="NortWindOLTP\Schema\Programmability\Stored Procedures\GetProductChangesByRowVersion.sql" />
+    <Build Include="NortWindOLTP\Schema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\NorthWind_20250711_23-54-58.dacpac" />
