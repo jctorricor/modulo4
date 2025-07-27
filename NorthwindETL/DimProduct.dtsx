@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="DimProduct"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{D60C53E2-EA81-4ABE-AA8E-5503EFC0D22F}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{1984B42A-FA13-4956-A337-71BFC88DDF69}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -212,6 +212,81 @@
                       cachedName="ProductID"
                       externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
                       lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[Fax]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Fax"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[Fax]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Fax]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[HomePage]"
+                      cachedDataType="nText"
+                      cachedName="HomePage"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[HomePage]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[HomePage]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[Phone]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Phone"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Phone]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[ContactTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="ContactTitle"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ContactTitle]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[ContactName]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="ContactName"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[ContactName]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ContactName]" />
+                    <inputColumn
+                      refId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedDataType="nText"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Add Products\Add New Product.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Description]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -484,6 +559,81 @@
                       cachedName="ProductSK"
                       externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[ProductSK]"
                       lineageId="Package\Add Products\Lookup.Outputs[Lookup Match Output].Columns[ProductSK]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[Fax]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Fax"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[Fax]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Fax]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[HomePage]"
+                      cachedDataType="nText"
+                      cachedName="HomePage"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[HomePage]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[HomePage]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[Phone]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Phone"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Phone]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[PostalCode]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[ContactTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="ContactTitle"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[ContactTitle]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ContactTitle]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[ContactName]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="ContactName"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[ContactName]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ContactName]" />
+                    <inputColumn
+                      refId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedDataType="nText"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Add Products\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Description]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -858,26 +1008,6 @@ where [refTable].[ProductID] = ?</property>
                       name="ProductName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
-                      length="40"
-                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
-                      name="CompanyName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryName]"
-                      length="15"
-                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
-                      name="CategoryName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[QuantityPerUnit]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -932,6 +1062,152 @@ where [refTable].[ProductID] = ?</property>
                       lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Discontinued]"
                       name="Discontinued"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[SupplierID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SupplierID]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[SupplierID]"
+                      name="SupplierID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryID]"
+                      name="CategoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryName]"
+                      length="15"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
+                      name="CategoryName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Description]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      length="40"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      name="CompanyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ContactName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
+                      length="30"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ContactName]"
+                      name="ContactName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ContactTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
+                      length="30"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ContactTitle]"
+                      name="ContactTitle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      length="60"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Address]"
+                      name="Address"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="15"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      length="15"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      length="10"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="15"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      length="24"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Phone]"
+                      name="Phone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Fax]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      length="24"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Fax]"
+                      name="Fax"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[HomePage]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HomePage]"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[HomePage]"
+                      name="HomePage"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -944,16 +1220,6 @@ where [refTable].[ProductID] = ?</property>
                       dataType="wstr"
                       length="40"
                       name="ProductName" />
-                    <externalMetadataColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
-                      dataType="wstr"
-                      length="40"
-                      name="CompanyName" />
-                    <externalMetadataColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryName]"
-                      dataType="wstr"
-                      length="15"
-                      name="CategoryName" />
                     <externalMetadataColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[QuantityPerUnit]"
                       dataType="wstr"
@@ -979,6 +1245,77 @@ where [refTable].[ProductID] = ?</property>
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Discontinued]"
                       dataType="bool"
                       name="Discontinued" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SupplierID]"
+                      dataType="i4"
+                      name="SupplierID" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryID]"
+                      dataType="i4"
+                      name="CategoryID" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryName]"
+                      dataType="wstr"
+                      length="15"
+                      name="CategoryName" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Description]"
+                      dataType="nText"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      name="CompanyName" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactName" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="15"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[HomePage]"
+                      dataType="nText"
+                      name="HomePage" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -998,17 +1335,91 @@ where [refTable].[ProductID] = ?</property>
                       lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ProductName]"
                       name="ProductName" />
                     <outputColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
-                      dataType="wstr"
-                      length="40"
-                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
-                      name="CompanyName" />
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SupplierID]"
+                      dataType="i4"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SupplierID]"
+                      name="SupplierID" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
+                      dataType="i4"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
+                      name="CategoryID" />
                     <outputColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CategoryName]"
                       dataType="wstr"
                       length="15"
                       lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CategoryName]"
                       name="CategoryName" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      dataType="nText"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      name="CompanyName" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ContactName]"
+                      name="ContactName" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
+                      name="ContactTitle" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      name="Address" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      name="Phone" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      name="Fax" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HomePage]"
+                      dataType="nText"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[HomePage]"
+                      name="HomePage" />
                     <outputColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[QuantityPerUnit]"
                       dataType="wstr"
@@ -1172,7 +1583,7 @@ where [refTable].[ProductID] = ?</property>
           SQLTask:Connection="{3F5568F3-CAD5-43D4-9217-9E5F919D43F4}"
           SQLTask:SqlStatementSource="EXECUTE [dbo].[UpdateLastPackageRowVersion] @tableName = 'Product', @lastRowVersion = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
-            SQLTask:ParameterName="0"
+            SQLTask:ParameterName="@lastRowVersion"
             SQLTask:DtsVariableName="User::dbts"
             SQLTask:ParameterDirection="Input"
             SQLTask:DataType="3"
@@ -1224,39 +1635,55 @@ where [refTable].[ProductID] = ?</property>
       DTS:To="Package\Update LastRowVersion" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="201.6,41.6"
+          Size="150.666666666667,41.3333333333334"
+          Id="Package\Add Products"
+          TopLeft="366.666646632884,272.999998101592" />
+        <NodeLayout
+          Size="170.666666666667,41.3333333333334"
+          Id="Package\clean-up staging area"
+          TopLeft="362.499980193874,192.399998662074" />
+        <NodeLayout
+          Size="201.333333333334,41.3333333333334"
           Id="Package\Get Database RowVersion"
           TopLeft="352.49998074025,44.1999996926388" />
         <NodeLayout
-          Size="173.6,41.6"
+          Size="173.333333333334,41.3333333333334"
           Id="Package\Get LastRowVersion"
           TopLeft="360.83331361827,113.533332543837" />
+        <NodeLayout
+          Size="161.333333333334,41.3333333333334"
+          Id="Package\Sync staging data"
+          TopLeft="364.166646769478,353.59999754111" />
+        <NodeLayout
+          Size="190.666666666667,41.3333333333334"
+          Id="Package\Update LastRowVersion"
+          TopLeft="343.333314574428,446.333330229587" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="450.46664717926,85.7999996926387">
+          TopLeft="450.46664717926,85.7999996926388">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27.733332851198"
+              EndConnector="0,27.7333328511982"
               Start="0,0"
-              End="0,20.233332851198">
+              End="0,20.2333328511982">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.233332851198" />
+                    End="0,20.2333328511982" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1265,24 +1692,20 @@ where [refTable].[ProductID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\clean-up staging area"
-          TopLeft="362.499980193874,192.399998662074" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="447.666646906072,155.133332543837">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.2666661182377"
+              EndConnector="0,37.266666118237"
               Start="0,0"
-              End="0,29.7666661182377">
+              End="0,29.766666118237">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.7666661182377" />
+                    End="0,29.766666118237" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1291,10 +1714,6 @@ where [refTable].[ProductID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Add Products"
-          TopLeft="366.666646632884,272.999998101592" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
           TopLeft="444.783313413379,233.999998662074">
@@ -1317,24 +1736,20 @@ where [refTable].[ProductID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Sync staging data"
-          TopLeft="352.49998074025,351.86666421983" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
-          TopLeft="439.783313686567,314.599998101592">
+          TopLeft="443.216646701181,314.599998101592">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.2666661182377"
+              EndConnector="0,38.999999439518"
               Start="0,0"
-              End="0,29.7666661182377">
+              End="0,31.499999439518">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.7666661182377" />
+                    End="0,31.499999439518" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1343,36 +1758,20 @@ where [refTable].[ProductID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="190.4,41.6"
-          Id="Package\Update LastRowVersion"
-          TopLeft="354.999980603656,448.933330211507" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
-          TopLeft="437.69998074025,393.46666421983">
+          TopLeft="441.549980671953,395.19999754111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.4999998634058,55.4666659916773"
+              EndConnector="0,51.133332688477"
               Start="0,0"
-              End="12.4999998634058,47.9666659916773">
+              End="0,43.633332688477">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.7333329958387" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.7333329958387"
-                    Point2="0,27.7333329958387"
-                    Point3="4,27.7333329958387" />
-                  <mssgle:LineSegment
-                    End="8.49999986340583,27.7333329958387" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.49999986340583,27.7333329958387"
-                    Point2="12.4999998634058,27.7333329958387"
-                    Point3="12.4999998634058,31.7333329958387" />
-                  <mssgle:LineSegment
-                    End="12.4999998634058,47.9666659916773" />
+                    End="0,43.633332688477" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1390,13 +1789,21 @@ where [refTable].[ProductID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152,41.6"
+          Size="113.333333333334,41.3333333333334"
+          Id="Package\Add Products\Lookup"
+          TopLeft="443.333309110669,207.999998553594" />
+        <NodeLayout
+          Size="152,41.3333333333334"
           Id="Package\Add Products\OLE DB Source"
           TopLeft="429.999976505837,106.599999258717" />
         <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Add Products\Lookup"
-          TopLeft="443.333309110669,207.999998553594" />
+          Size="170.666666666667,41.3333333333334"
+          Id="Package\Add Products\Add New Product"
+          TopLeft="629.999965578319,319.799997776151" />
+        <NodeLayout
+          Size="170.666666666667,41.3333333333334"
+          Id="Package\Add Products\Load Staging"
+          TopLeft="222.499987843137,318.933331115511" />
         <EdgeLayout
           Id="Package\Add Products.Paths[OLE DB Source Output]"
           TopLeft="502.866642808253,148.199999258717">
@@ -1419,10 +1826,42 @@ where [refTable].[ProductID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Add Products\Load Staging"
-          TopLeft="222.499987843137,318.933331115511" />
+        <EdgeLayout
+          Id="Package\Add Products.Paths[Lookup No Match Output]"
+          TopLeft="517.199975777336,249.599998553594">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="198.399989800984,70.1999992225568"
+              Start="0,0"
+              End="198.399989800984,62.6999992225568">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.6690905915896" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.6690905915896"
+                    Point2="0,28.6690905915896"
+                    Point3="4,28.6690905915896" />
+                  <mssgle:LineSegment
+                    End="194.399989800984,28.6690905915896" />
+                  <mssgle:CubicBezierSegment
+                    Point1="194.399989800984,28.6690905915896"
+                    Point2="198.399989800984,28.6690905915896"
+                    Point3="198.399989800984,32.6690905915896" />
+                  <mssgle:LineSegment
+                    End="198.399989800984,62.6999992225568" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="34.524955837992,33.6690905915896,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Add Products.Paths[Lookup Match Output]"
           TopLeft="482.266642444002,249.599998553594">
@@ -1459,64 +1898,16 @@ where [refTable].[ProductID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Add Products\Add New Product"
-          TopLeft="629.999965578319,319.799997776151" />
-        <EdgeLayout
-          Id="Package\Add Products.Paths[Lookup No Match Output]"
-          TopLeft="517.199975777336,249.599998553594">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="198.399989800984,70.1999992225568"
-              Start="0,0"
-              End="198.399989800984,62.6999992225568">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.6690905915896" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.6690905915896"
-                    Point2="0,28.6690905915896"
-                    Point3="4,28.6690905915896" />
-                  <mssgle:LineSegment
-                    End="194.399989800984,28.6690905915896" />
-                  <mssgle:CubicBezierSegment
-                    Point1="194.399989800984,28.6690905915896"
-                    Point2="198.399989800984,28.6690905915896"
-                    Point3="198.399989800984,32.6690905915896" />
-                  <mssgle:LineSegment
-                    End="198.399989800984,62.6999992225568" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="43.3936081817418,33.6690905915896,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Add Products\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Add Products\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1526,7 +1917,7 @@ where [refTable].[ProductID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1534,7 +1925,15 @@ where [refTable].[ProductID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Add Products\Load Staging">
+    design-time-name="Package\Add Products\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Add Products\Add New Product">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1547,7 +1946,7 @@ where [refTable].[ProductID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Add Products\Add New Product">
+    design-time-name="Package\Add Products\Load Staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

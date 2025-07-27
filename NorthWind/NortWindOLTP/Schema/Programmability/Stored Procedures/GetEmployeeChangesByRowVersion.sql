@@ -22,8 +22,7 @@ BEGIN
       ,E.[Photo]
       ,E.[Notes]
       ,E.[ReportsTo]
-      ,E.[PhotoPath]
-      ,E.[rowversion]
+      ,E.[PhotoPath]      
       ,T.TerritoryDescription
       ,R.RegionDescription
   FROM [NorthWind].[dbo].[Employees] E
