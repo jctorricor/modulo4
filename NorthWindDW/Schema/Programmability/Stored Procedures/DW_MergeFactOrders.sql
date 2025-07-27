@@ -16,7 +16,7 @@ BEGIN
 	   ,[RequiredDate]    = sc.[RequiredDate]
 	   ,[ShippedDate]     = sc.[ShippedDate]	
 	FROM [dbo].[FactOrders]         dc
-	INNER JOIN [staging].[order] sc ON (dc.[OrderID] = sc.[OrderID] AND dc.ProductID = sc.[ProductID])
+	INNER JOIN [staging].[Orders] sc ON (dc.[OrderID] = sc.[OrderID] AND dc.ProductID = sc.[ProductID])
 END
 GO
 

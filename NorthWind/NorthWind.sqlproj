@@ -81,6 +81,7 @@
     <Build Include="NortWindOLTP\Schema\Programmability\Stored Procedures\GetDatabaseRowVersion.sql" />
     <Build Include="NortWindOLTP\Schema\Programmability\Stored Procedures\GetEmployeeChangesByRowVersion.sql" />
     <Build Include="NortWindOLTP\Schema\Programmability\Stored Procedures\GetCustomerChangesByRowVersion.sql" />
+    <Build Include="NortWindOLTP\Schema\Programmability\Stored Procedures\GetOrdersChangesByRowVersion.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Snapshots\NorthWind_20250711_23-54-58.dacpac" />
