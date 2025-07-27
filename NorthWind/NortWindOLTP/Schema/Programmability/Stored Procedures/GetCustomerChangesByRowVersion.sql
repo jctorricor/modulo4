@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[GetProductChangesByRowVersion]
+﻿CREATE PROCEDURE [dbo].[GetCustomerChangesByRowVersion]
 	@startRow BIGINT 
    ,@endRow  BIGINT 
 AS
