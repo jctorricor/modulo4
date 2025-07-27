@@ -11,8 +11,8 @@
   DTS:LocaleID="16394"
   DTS:ObjectName="DimProduct"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{31BA2C44-517F-4679-AC51-7119DFB89C23}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{1984B42A-FA13-4956-A337-71BFC88DDF69}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1008,26 +1008,6 @@ where [refTable].[ProductID] = ?</property>
                       name="ProductName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
-                      length="40"
-                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
-                      name="CompanyName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryName]"
-                      length="15"
-                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
-                      name="CategoryName"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[QuantityPerUnit]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -1101,6 +1081,16 @@ where [refTable].[ProductID] = ?</property>
                       name="CategoryID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryName]"
+                      length="15"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CategoryName]"
+                      name="CategoryName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Description]"
                       dataType="nText"
                       errorOrTruncationOperation="Conversion"
@@ -1108,6 +1098,16 @@ where [refTable].[ProductID] = ?</property>
                       externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Description]"
                       lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[Description]"
                       name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      length="40"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      name="CompanyName"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].Columns[ContactName]"
@@ -1221,16 +1221,6 @@ where [refTable].[ProductID] = ?</property>
                       length="40"
                       name="ProductName" />
                     <externalMetadataColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
-                      dataType="wstr"
-                      length="40"
-                      name="CompanyName" />
-                    <externalMetadataColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryName]"
-                      dataType="wstr"
-                      length="15"
-                      name="CategoryName" />
-                    <externalMetadataColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[QuantityPerUnit]"
                       dataType="wstr"
                       length="20"
@@ -1264,9 +1254,19 @@ where [refTable].[ProductID] = ?</property>
                       dataType="i4"
                       name="CategoryID" />
                     <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CategoryName]"
+                      dataType="wstr"
+                      length="15"
+                      name="CategoryName" />
+                    <externalMetadataColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Description]"
                       dataType="nText"
                       name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      name="CompanyName" />
                     <externalMetadataColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
                       dataType="wstr"
@@ -1345,22 +1345,22 @@ where [refTable].[ProductID] = ?</property>
                       lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CategoryID]"
                       name="CategoryID" />
                     <outputColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CategoryName]"
                       dataType="wstr"
-                      length="40"
-                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
-                      name="CompanyName" />
+                      length="15"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CategoryName]"
+                      name="CategoryName" />
                     <outputColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Description]"
                       dataType="nText"
                       lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Description]"
                       name="Description" />
                     <outputColumn
-                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CategoryName]"
+                      refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
                       dataType="wstr"
-                      length="15"
-                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CategoryName]"
-                      name="CategoryName" />
+                      length="40"
+                      lineageId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      name="CompanyName" />
                     <outputColumn
                       refId="Package\Add Products\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ContactName]"
                       dataType="wstr"
@@ -1635,39 +1635,39 @@ where [refTable].[ProductID] = ?</property>
       DTS:To="Package\Update LastRowVersion" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150.666666666667,41.3333333333334"
           Id="Package\Add Products"
           TopLeft="366.666646632884,272.999998101592" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="170.666666666667,41.3333333333334"
           Id="Package\clean-up staging area"
           TopLeft="362.499980193874,192.399998662074" />
         <NodeLayout
-          Size="201.6,41.6"
+          Size="201.333333333334,41.3333333333334"
           Id="Package\Get Database RowVersion"
           TopLeft="352.49998074025,44.1999996926388" />
         <NodeLayout
-          Size="173.6,41.6"
+          Size="173.333333333334,41.3333333333334"
           Id="Package\Get LastRowVersion"
           TopLeft="360.83331361827,113.533332543837" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="161.333333333334,41.3333333333334"
           Id="Package\Sync staging data"
           TopLeft="364.166646769478,353.59999754111" />
         <NodeLayout
-          Size="190.4,41.6"
+          Size="190.666666666667,41.3333333333334"
           Id="Package\Update LastRowVersion"
           TopLeft="343.333314574428,446.333330229587" />
         <EdgeLayout
@@ -1789,21 +1789,21 @@ where [refTable].[ProductID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="112.8,41.6"
+          Size="113.333333333334,41.3333333333334"
           Id="Package\Add Products\Lookup"
           TopLeft="443.333309110669,207.999998553594" />
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Add Products\Load Staging"
-          TopLeft="222.499987843137,318.933331115511" />
+          Size="152,41.3333333333334"
+          Id="Package\Add Products\OLE DB Source"
+          TopLeft="429.999976505837,106.599999258717" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="170.666666666667,41.3333333333334"
           Id="Package\Add Products\Add New Product"
           TopLeft="629.999965578319,319.799997776151" />
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\Add Products\OLE DB Source"
-          TopLeft="429.999976505837,106.599999258717" />
+          Size="170.666666666667,41.3333333333334"
+          Id="Package\Add Products\Load Staging"
+          TopLeft="222.499987843137,318.933331115511" />
         <EdgeLayout
           Id="Package\Add Products.Paths[OLE DB Source Output]"
           TopLeft="502.866642808253,148.199999258717">
@@ -1858,7 +1858,7 @@ where [refTable].[ProductID] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="43.3936081817418,33.6690905915896,111.6127734375,11.609375"
+              BoundingBox="34.524955837992,33.6690905915896,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1907,7 +1907,7 @@ where [refTable].[ProductID] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1917,7 +1917,7 @@ where [refTable].[ProductID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1925,15 +1925,10 @@ where [refTable].[ProductID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Add Products\Load Staging">
+    design-time-name="Package\Add Products\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -1951,10 +1946,15 @@ where [refTable].[ProductID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Add Products\OLE DB Source">
+    design-time-name="Package\Add Products\Load Staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
