@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimEmployee"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{8FA12EC0-F2F0-48B6-AC1C-426CF201CB2D}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{54FA028B-EFDE-4832-9EA7-12075BD07536}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -865,6 +865,22 @@ where [refTable].[EmployeeID] = ?</property>
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Add New Employee\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Add New Employee\Lookup.Outputs[Lookup Match Output].Columns[EmployeeSK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Add New Employee\Lookup.Outputs[Lookup Match Output].Columns[EmployeeSK]"
+                      name="EmployeeSK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">EmployeeSK</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
@@ -1489,7 +1505,7 @@ where [refTable].[EmployeeID] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{0BDA6DDC-61C6-413D-B3A8-F60504101146}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [staging].[Staff];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [staging].[Employee];" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1589,21 +1605,29 @@ where [refTable].[EmployeeID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="173.333333333334,42.6666666666667"
+          Size="173.5,42.5"
           Id="Package\Add New Employee"
           TopLeft="457.333319028219,340.052627845237" />
         <NodeLayout
-          Size="168,42.6666666666667"
+          Size="168,42.5"
           Id="Package\Get Database RowVersion"
           TopLeft="467.499979101122,95.789472632461" />
         <NodeLayout
-          Size="177.333333333334,42.6666666666667"
+          Size="177.5,42.5"
           Id="Package\Get Employee RowVersion"
           TopLeft="458.124987455085,177.236840219627" />
         <NodeLayout
-          Size="168,42.6666666666667"
+          Size="168,42.5"
           Id="Package\Initialize Staging"
           TopLeft="456.083319084098,251.789470919612" />
+        <NodeLayout
+          Size="178.5,42"
+          Id="Package\Sync Employee Data"
+          TopLeft="461.249979380519,420.087714693085" />
+        <NodeLayout
+          Size="194.5,42.5"
+          Id="Package\Update LastRowVersion"
+          TopLeft="453.124979743735,498.105257688797" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="549.145816611437,138.456139299128">
@@ -1670,10 +1694,6 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="178.666666666667,42"
-          Id="Package\Sync Employee Data"
-          TopLeft="461.249979380519,420.087714693085" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="547.291649204369,382.719294511903">
@@ -1696,10 +1716,6 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="194.666666666667,42.6666666666667"
-          Id="Package\Update LastRowVersion"
-          TopLeft="453.124979743735,498.105257688797" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="550.52081289546,462.087714693085">
@@ -1731,13 +1747,21 @@ where [refTable].[EmployeeID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Add New Employee\OLE DB Source"
-          TopLeft="569.999974519015,229.894734317907" />
-        <NodeLayout
-          Size="114.666666666667,42.6666666666667"
+          Size="114.5,42.5"
           Id="Package\Add New Employee\Lookup"
           TopLeft="591.874973541126,324.999996431564" />
+        <NodeLayout
+          Size="142.5,42.5"
+          Id="Package\Add New Employee\Load Staging"
+          TopLeft="400.624982090668,467.999994861452" />
+        <NodeLayout
+          Size="173.5,42.5"
+          Id="Package\Add New Employee\Add New Employee"
+          TopLeft="657.49997060746,468.684205380256" />
+        <NodeLayout
+          Size="154.5,42.5"
+          Id="Package\Add New Employee\OLE DB Source"
+          TopLeft="569.999974519015,229.894734317907" />
         <EdgeLayout
           Id="Package\Add New Employee.Paths[OLE DB Source Output]"
           TopLeft="648.270807363404,272.561400984573">
@@ -1760,50 +1784,6 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="142.666666666667,42.6666666666667"
-          Id="Package\Add New Employee\Load Staging"
-          TopLeft="400.624982090668,467.999994861452" />
-        <EdgeLayout
-          Id="Package\Add New Employee.Paths[Lookup Match Output]"
-          TopLeft="631.430529096682,367.666663098231">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-159.472213672681,100.333331763222"
-              Start="0,0"
-              End="-159.472213672681,92.8333317632216">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.9617730592969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.9617730592969"
-                    Point2="0,40.9617730592969"
-                    Point3="-4,40.9617730592969" />
-                  <mssgle:LineSegment
-                    End="-155.472213672681,40.9617730592969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-155.472213672681,40.9617730592969"
-                    Point2="-159.472213672681,40.9617730592969"
-                    Point3="-159.472213672681,44.9617730592969" />
-                  <mssgle:LineSegment
-                    End="-159.472213672681,92.8333317632216" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-127.927493555091,45.9617730592969,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="173.333333333334,42.6666666666667"
-          Id="Package\Add New Employee\Add New Employee"
-          TopLeft="657.49997060746,468.684205380256" />
         <EdgeLayout
           Id="Package\Add New Employee.Paths[Lookup No Match Output]"
           TopLeft="666.986084652238,367.666663098231">
@@ -1840,17 +1820,45 @@ where [refTable].[EmployeeID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Add New Employee.Paths[Lookup Match Output]"
+          TopLeft="631.430529096682,367.666663098231">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-159.472213672681,100.333331763222"
+              Start="0,0"
+              End="-159.472213672681,92.8333317632216">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.9617730592969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.9617730592969"
+                    Point2="0,40.9617730592969"
+                    Point3="-4,40.9617730592969" />
+                  <mssgle:LineSegment
+                    End="-155.472213672681,40.9617730592969" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-155.472213672681,40.9617730592969"
+                    Point2="-159.472213672681,40.9617730592969"
+                    Point3="-159.472213672681,44.9617730592969" />
+                  <mssgle:LineSegment
+                    End="-159.472213672681,92.8333317632216" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-127.927493555091,45.9617730592969,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Add New Employee\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Add New Employee\Lookup">
     <Properties>
@@ -1897,6 +1905,14 @@ where [refTable].[EmployeeID] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Add New Employee\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
