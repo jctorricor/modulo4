@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimEmployee"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{54FA028B-EFDE-4832-9EA7-12075BD07536}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{3CEBDAAB-A9DD-499D-B465-2874F8F0B2B8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -628,6 +628,12 @@
                       cachedName="RegionDescription"
                       externalMetadataColumnId="Package\Add New Employee\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[RegionDescription]"
                       lineageId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[RegionDescription]" />
+                    <inputColumn
+                      refId="Package\Add New Employee\Load Staging.Inputs[OLE DB Destination Input].Columns[EmployeeSK]"
+                      cachedDataType="i4"
+                      cachedName="EmployeeSK"
+                      externalMetadataColumnId="Package\Add New Employee\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeSK]"
+                      lineageId="Package\Add New Employee\Lookup.Outputs[Lookup Match Output].Columns[EmployeeSK]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -793,7 +799,7 @@ where [refTable].[EmployeeID] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -861,7 +867,6 @@ where [refTable].[EmployeeID] = ?</property>
                 <output
                   refId="Package\Add New Employee\Lookup.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Add New Employee\Lookup.Inputs[Lookup Input]">
@@ -961,7 +966,7 @@ where [refTable].[EmployeeID] = ?</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"@startRow:Input",{AD4B38AA-AD78-4AF8-BBD2-8D36EAA34C08};"@endRow:Input",{B6C88147-4B86-441C-84A6-9055DAA78820};</property>
+                  name="ParameterMapping">"@startRow:Input",{B6C88147-4B86-441C-84A6-9055DAA78820};"@endRow:Input",{AD4B38AA-AD78-4AF8-BBD2-8D36EAA34C08};</property>
               </properties>
               <connections>
                 <connection
@@ -1539,7 +1544,7 @@ where [refTable].[EmployeeID] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{0BDA6DDC-61C6-413D-B3A8-F60504101146}"
-          SQLTask:SqlStatementSource="EXECUTE [dbo].[UpdateLastPackageRowVersion] @tableName='Staff', @lastRowVersion=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          SQLTask:SqlStatementSource="EXECUTE [dbo].[UpdateLastPackageRowVersion] @tableName='Employee', @lastRowVersion=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
             SQLTask:DtsVariableName="User::DBTSValue"
@@ -1607,7 +1612,7 @@ where [refTable].[EmployeeID] = ?</property>
         <NodeLayout
           Size="173.5,42.5"
           Id="Package\Add New Employee"
-          TopLeft="457.333319028219,340.052627845237" />
+          TopLeft="456.833319028219,340.052627845237" />
         <NodeLayout
           Size="168,42.5"
           Id="Package\Get Database RowVersion"
@@ -1674,18 +1679,18 @@ where [refTable].[EmployeeID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="542.041652389492,294.456137586279">
+          TopLeft="541.833319056158,294.289470919612">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.5964902589581"
+              EndConnector="0,45.763156925625"
               Start="0,0"
-              End="0,38.0964902589581">
+              End="0,38.263156925625">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.0964902589581" />
+                    End="0,38.263156925625" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1696,18 +1701,18 @@ where [refTable].[EmployeeID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="547.291649204369,382.719294511903">
+          TopLeft="547.041649204369,382.552627845237">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37.3684201811819"
+              EndConnector="0,37.535086847848"
               Start="0,0"
-              End="0,29.8684201811819">
+              End="0,30.035086847848">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.8684201811819" />
+                    End="0,30.035086847848" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1747,9 +1752,9 @@ where [refTable].[EmployeeID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="114.5,42.5"
-          Id="Package\Add New Employee\Lookup"
-          TopLeft="591.874973541126,324.999996431564" />
+          Size="154.5,42.5"
+          Id="Package\Add New Employee\OLE DB Source"
+          TopLeft="569.999974519015,229.894734317907" />
         <NodeLayout
           Size="142.5,42.5"
           Id="Package\Add New Employee\Load Staging"
@@ -1759,23 +1764,95 @@ where [refTable].[EmployeeID] = ?</property>
           Id="Package\Add New Employee\Add New Employee"
           TopLeft="657.49997060746,468.684205380256" />
         <NodeLayout
-          Size="154.5,42.5"
-          Id="Package\Add New Employee\OLE DB Source"
-          TopLeft="569.999974519015,229.894734317907" />
+          Size="114.5,42.5"
+          Id="Package\Add New Employee\Lookup"
+          TopLeft="593.374973541126,324.999996431564" />
         <EdgeLayout
-          Id="Package\Add New Employee.Paths[OLE DB Source Output]"
-          TopLeft="648.270807363404,272.561400984573">
+          Id="Package\Add New Employee.Paths[Lookup No Match Output]"
+          TopLeft="668.374973541126,367.499996431564">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.438595446991"
+              EndConnector="75.874997066334,101.184208948692"
               Start="0,0"
-              End="0,44.938595446991">
+              End="75.874997066334,93.684208948692">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.938595446991" />
+                    End="0,37.3103488731094" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.3103488731094"
+                    Point2="0,41.3103488731094"
+                    Point3="4,41.3103488731094" />
+                  <mssgle:LineSegment
+                    End="71.874997066334,41.3103488731094" />
+                  <mssgle:CubicBezierSegment
+                    Point1="71.874997066334,41.3103488731094"
+                    Point2="75.874997066334,41.3103488731094"
+                    Point3="75.874997066334,45.3103488731094" />
+                  <mssgle:LineSegment
+                    End="75.874997066334,93.684208948692" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-17.868888185583,46.3103488731094,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Add New Employee.Paths[Lookup Match Output]"
+          TopLeft="632.874973541126,367.499996431564">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-160.999991450458,100.499998429888"
+              Start="0,0"
+              End="-160.999991450458,92.999998429888">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.0310071109104" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.0310071109104"
+                    Point2="0,41.0310071109104"
+                    Point3="-4,41.0310071109104" />
+                  <mssgle:LineSegment
+                    End="-156.999991450458,41.0310071109104" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-156.999991450458,41.0310071109104"
+                    Point2="-160.999991450458,41.0310071109104"
+                    Point3="-160.999991450458,45.0310071109104" />
+                  <mssgle:LineSegment
+                    End="-160.999991450458,92.999998429888" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-128.691382443979,46.0310071109104,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Add New Employee.Paths[OLE DB Source Output]"
+          TopLeft="648.93747403007,272.394734317907">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.605262113657"
+              Start="0,0"
+              End="0,45.105262113657">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.105262113657" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1784,99 +1861,12 @@ where [refTable].[EmployeeID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Add New Employee.Paths[Lookup No Match Output]"
-          TopLeft="666.986084652238,367.666663098231">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="77.1805526218895,101.017542282025"
-              Start="0,0"
-              End="77.1805526218895,93.5175422820249">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.2411067114689" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.2411067114689"
-                    Point2="0,41.2411067114689"
-                    Point3="4,41.2411067114689" />
-                  <mssgle:LineSegment
-                    End="73.1805526218895,41.2411067114689" />
-                  <mssgle:CubicBezierSegment
-                    Point1="73.1805526218895,41.2411067114689"
-                    Point2="77.1805526218895,41.2411067114689"
-                    Point3="77.1805526218895,45.2411067114689" />
-                  <mssgle:LineSegment
-                    End="77.1805526218895,93.5175422820249" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-17.2161104078052,46.2411067114689,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Add New Employee.Paths[Lookup Match Output]"
-          TopLeft="631.430529096682,367.666663098231">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-159.472213672681,100.333331763222"
-              Start="0,0"
-              End="-159.472213672681,92.8333317632216">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.9617730592969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.9617730592969"
-                    Point2="0,40.9617730592969"
-                    Point3="-4,40.9617730592969" />
-                  <mssgle:LineSegment
-                    End="-155.472213672681,40.9617730592969" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-155.472213672681,40.9617730592969"
-                    Point2="-159.472213672681,40.9617730592969"
-                    Point3="-159.472213672681,44.9617730592969" />
-                  <mssgle:LineSegment
-                    End="-159.472213672681,92.8333317632216" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-127.927493555091,45.9617730592969,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Add New Employee\Lookup">
+    design-time-name="Package\Add New Employee\OLE DB Source">
     <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimEmployee]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -1909,8 +1899,23 @@ where [refTable].[EmployeeID] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Add New Employee\OLE DB Source">
+    design-time-name="Package\Add New Employee\Lookup">
     <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimEmployee]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
