@@ -47,7 +47,9 @@ BEGIN
            ori.[Discount],
            ord.[OrderDate],
            ord.[RequiredDate],
-           ord.[ShippedDate]
+           ord.[ShippedDate],
+           ori.[UnitPrice],
+           ord.[Freight]
     FROM [dbo].[Orders] ord
     INNER JOIN [dbo].[OrderDetails] ori ON (ord.[OrderId] = ori.[OrderId])    
     WHERE (ord.[rowversion] > CONVERT(ROWVERSION, @startRow) 

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DimEmployee"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{3CEBDAAB-A9DD-499D-B465-2874F8F0B2B8}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{E284F561-C2BD-457B-B11A-433E3BC6E13F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -58,7 +58,7 @@
       DTS:DTSID="{AD4B38AA-AD78-4AF8-BBD2-8D36EAA34C08}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
-      DTS:ObjectName="DBTSValue">
+      DTS:ObjectName="dbts">
       <DTS:VariableValue
         DTS:DataType="3">0</DTS:VariableValue>
     </DTS:Variable>
@@ -628,12 +628,6 @@
                       cachedName="RegionDescription"
                       externalMetadataColumnId="Package\Add New Employee\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[RegionDescription]"
                       lineageId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[RegionDescription]" />
-                    <inputColumn
-                      refId="Package\Add New Employee\Load Staging.Inputs[OLE DB Destination Input].Columns[EmployeeSK]"
-                      cachedDataType="i4"
-                      cachedName="EmployeeSK"
-                      externalMetadataColumnId="Package\Add New Employee\Load Staging.Inputs[OLE DB Destination Input].ExternalColumns[EmployeeSK]"
-                      lineageId="Package\Add New Employee\Lookup.Outputs[Lookup Match Output].Columns[EmployeeSK]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1156,16 +1150,6 @@ where [refTable].[EmployeeID] = ?</property>
                       name="PhotoPath"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[rowversion]"
-                      dataType="bytes"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rowversion]"
-                      length="8"
-                      lineageId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[rowversion]"
-                      name="rowversion"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Output].Columns[TerritoryDescription]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
@@ -1272,11 +1256,6 @@ where [refTable].[EmployeeID] = ?</property>
                       dataType="wstr"
                       length="255"
                       name="PhotoPath" />
-                    <externalMetadataColumn
-                      refId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[rowversion]"
-                      dataType="bytes"
-                      length="8"
-                      name="rowversion" />
                     <externalMetadataColumn
                       refId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[TerritoryDescription]"
                       dataType="wstr"
@@ -1397,12 +1376,6 @@ where [refTable].[EmployeeID] = ?</property>
                       lineageId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PhotoPath]"
                       name="PhotoPath" />
                     <outputColumn
-                      refId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rowversion]"
-                      dataType="bytes"
-                      length="8"
-                      lineageId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[rowversion]"
-                      name="rowversion" />
-                    <outputColumn
                       refId="Package\Add New Employee\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[TerritoryDescription]"
                       dataType="wstr"
                       length="50"
@@ -1470,7 +1443,7 @@ where [refTable].[EmployeeID] = ?</property>
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="dbts"
-            SQLTask:DtsVariableName="User::DBTSValue" />
+            SQLTask:DtsVariableName="User::dbts" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -1547,7 +1520,7 @@ where [refTable].[EmployeeID] = ?</property>
           SQLTask:SqlStatementSource="EXECUTE [dbo].[UpdateLastPackageRowVersion] @tableName='Employee', @lastRowVersion=?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
-            SQLTask:DtsVariableName="User::DBTSValue"
+            SQLTask:DtsVariableName="User::dbts"
             SQLTask:ParameterDirection="Input"
             SQLTask:DataType="3"
             SQLTask:ParameterSize="-1" />
@@ -1598,39 +1571,39 @@ where [refTable].[EmployeeID] = ?</property>
       DTS:To="Package\Update LastRowVersion" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="173.5,42.5"
+          Size="173.6,42.4"
           Id="Package\Add New Employee"
           TopLeft="456.833319028219,340.052627845237" />
         <NodeLayout
-          Size="168,42.5"
+          Size="168,42.4"
           Id="Package\Get Database RowVersion"
           TopLeft="467.499979101122,95.789472632461" />
         <NodeLayout
-          Size="177.5,42.5"
+          Size="177.6,42.4"
           Id="Package\Get Employee RowVersion"
           TopLeft="458.124987455085,177.236840219627" />
         <NodeLayout
-          Size="168,42.5"
+          Size="168,42.4"
           Id="Package\Initialize Staging"
           TopLeft="456.083319084098,251.789470919612" />
         <NodeLayout
-          Size="178.5,42"
+          Size="178.4,41.6"
           Id="Package\Sync Employee Data"
           TopLeft="461.249979380519,420.087714693085" />
         <NodeLayout
-          Size="194.5,42.5"
+          Size="194.4,42.4"
           Id="Package\Update LastRowVersion"
           TopLeft="453.124979743735,498.105257688797" />
         <EdgeLayout
@@ -1752,19 +1725,19 @@ where [refTable].[EmployeeID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.5,42.5"
+          Size="152,41.6"
           Id="Package\Add New Employee\OLE DB Source"
           TopLeft="569.999974519015,229.894734317907" />
         <NodeLayout
-          Size="142.5,42.5"
+          Size="140,41.6"
           Id="Package\Add New Employee\Load Staging"
           TopLeft="400.624982090668,467.999994861452" />
         <NodeLayout
-          Size="173.5,42.5"
+          Size="173.6,42.4"
           Id="Package\Add New Employee\Add New Employee"
           TopLeft="657.49997060746,468.684205380256" />
         <NodeLayout
-          Size="114.5,42.5"
+          Size="114.4,42.4"
           Id="Package\Add New Employee\Lookup"
           TopLeft="593.374973541126,324.999996431564" />
         <EdgeLayout
@@ -1805,54 +1778,54 @@ where [refTable].[EmployeeID] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Add New Employee.Paths[Lookup Match Output]"
-          TopLeft="632.874973541126,367.499996431564">
+          TopLeft="632.841640207793,367.399996431564">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-160.999991450458,100.499998429888"
+              EndConnector="-162.216658117125,100.599998429888"
               Start="0,0"
-              End="-160.999991450458,92.999998429888">
+              End="-162.216658117125,93.099998429888">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.0310071109104" />
+                    End="0,37.0725510830991" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.0310071109104"
-                    Point2="0,41.0310071109104"
-                    Point3="-4,41.0310071109104" />
+                    Point1="0,37.0725510830991"
+                    Point2="0,41.0725510830991"
+                    Point3="-4,41.0725510830991" />
                   <mssgle:LineSegment
-                    End="-156.999991450458,41.0310071109104" />
+                    End="-158.216658117125,41.0725510830991" />
                   <mssgle:CubicBezierSegment
-                    Point1="-156.999991450458,41.0310071109104"
-                    Point2="-160.999991450458,41.0310071109104"
-                    Point3="-160.999991450458,45.0310071109104" />
+                    Point1="-158.216658117125,41.0725510830991"
+                    Point2="-162.216658117125,41.0725510830991"
+                    Point3="-162.216658117125,45.0725510830991" />
                   <mssgle:LineSegment
-                    End="-160.999991450458,92.999998429888" />
+                    End="-162.216658117125,93.099998429888" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-128.691382443979,46.0310071109104,96.3827734375,11.609375"
+              BoundingBox="-129.299715777312,46.0725510830991,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Add New Employee.Paths[OLE DB Source Output]"
-          TopLeft="648.93747403007,272.394734317907">
+          TopLeft="648.287474030071,271.494734317907">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.605262113657"
+              EndConnector="0,53.505262113657"
               Start="0,0"
-              End="0,45.105262113657">
+              End="0,46.005262113657">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.105262113657" />
+                    End="0,46.005262113657" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

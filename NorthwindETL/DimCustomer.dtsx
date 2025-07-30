@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="DimCustomer"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{304F9AD0-F8E1-448C-9B9E-A9CB4E15B011}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{78C12DBC-B9B4-4D6D-A86D-6D531B2E635C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -303,12 +303,6 @@
                       cachedName="Fax"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\AddNewCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fax]"
                       lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Fax]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\AddNewCustomer.Inputs[Entrada de destino de OLE DB].Columns[CustomerDesc]"
-                      cachedDataType="nText"
-                      cachedName="CustomerDesc"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\AddNewCustomer.Inputs[Entrada de destino de OLE DB].ExternalColumns[CustomerDesc]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CustomerDesc]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -710,18 +704,6 @@ where [refTable].[CustomerID] = ?</property>
                       cachedName="Fax"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\LoadStagging.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fax]"
                       lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[Fax]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\LoadStagging.Inputs[Entrada de destino de OLE DB].Columns[CustomerDesc]"
-                      cachedDataType="nText"
-                      cachedName="CustomerDesc"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\LoadStagging.Inputs[Entrada de destino de OLE DB].ExternalColumns[CustomerDesc]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CustomerDesc]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\LoadStagging.Inputs[Entrada de destino de OLE DB].Columns[CustomerSK]"
-                      cachedDataType="i4"
-                      cachedName="CustomerSK"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\LoadStagging.Inputs[Entrada de destino de OLE DB].ExternalColumns[CustomerSK]"
-                      lineageId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda].Columns[CustomerSK]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -997,15 +979,6 @@ where [refTable].[CustomerID] = ?</property>
                       lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[rowversion]"
                       name="rowversion"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CustomerDesc]"
-                      dataType="nText"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[CustomerDesc]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].Columns[CustomerDesc]"
-                      name="CustomerDesc"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1069,10 +1042,6 @@ where [refTable].[CustomerID] = ?</property>
                       dataType="bytes"
                       length="8"
                       name="rowversion" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de origen de OLE DB].ExternalColumns[CustomerDesc]"
-                      dataType="nText"
-                      name="CustomerDesc" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1152,11 +1121,6 @@ where [refTable].[CustomerID] = ?</property>
                       length="8"
                       lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[rowversion]"
                       name="rowversion" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[CustomerDesc]"
-                      dataType="nText"
-                      lineageId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[CustomerDesc]"
-                      name="CustomerDesc" />
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Origen de OLE DB.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -1275,13 +1239,29 @@ where [refTable].[CustomerID] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="204,42"
+          Size="188,41.6"
+          Id="Package\CleanUp Staging Area"
+          TopLeft="138,242" />
+        <NodeLayout
+          Size="204,41.6"
           Id="Package\GetDataBaseRowVersion"
           TopLeft="5.5,5.5" />
         <NodeLayout
-          Size="177,42"
+          Size="176.8,41.6"
           Id="Package\GetLastRowVersion"
           TopLeft="107,130" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\SyncSataggingData"
+          TopLeft="197,448" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="174,360" />
+        <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\UpdateLastRowVersion"
+          TopLeft="211.111111111111,530" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="107.5,47.5">
@@ -1316,10 +1296,6 @@ where [refTable].[CustomerID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="188,42"
-          Id="Package\CleanUp Staging Area"
-          TopLeft="138,242" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 1]"
           TopLeft="195.5,172">
@@ -1354,10 +1330,6 @@ where [refTable].[CustomerID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Tarea Flujo de datos"
-          TopLeft="174,360" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 2]"
           TopLeft="232,284">
@@ -1392,10 +1364,6 @@ where [refTable].[CustomerID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\SyncSataggingData"
-          TopLeft="197,448" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 3]"
           TopLeft="264,402">
@@ -1430,10 +1398,6 @@ where [refTable].[CustomerID] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="195,42"
-          Id="Package\UpdateLastRowVersion"
-          TopLeft="211.111111111111,530" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
           TopLeft="285,490">
@@ -1477,89 +1441,19 @@ where [refTable].[CustomerID] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="170,42"
+          Size="147.2,41.6"
+          Id="Package\Tarea Flujo de datos\LoadStagging"
+          TopLeft="237,334.86666666064" />
+        <NodeLayout
+          Size="169.6,41.6"
           Id="Package\Tarea Flujo de datos\Origen de OLE DB"
           TopLeft="492,71" />
         <NodeLayout
-          Size="129,42"
+          Size="128.8,41.6"
           Id="Package\Tarea Flujo de datos\Búsqueda"
           TopLeft="365,217" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
-          TopLeft="577,113">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-147.5,104"
-              Start="0,0"
-              End="-147.5,96.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,48"
-                    Point2="0,52"
-                    Point3="-4,52" />
-                  <mssgle:LineSegment
-                    End="-143.5,52" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-143.5,52"
-                    Point2="-147.5,52"
-                    Point3="-147.5,56" />
-                  <mssgle:LineSegment
-                    End="-147.5,96.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="147,42"
-          Id="Package\Tarea Flujo de datos\LoadStagging"
-          TopLeft="237,334" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="409.333333333333,259">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-98.8333333333333,75"
-              Start="0,0"
-              End="-98.8333333333333,67.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.5513016845329" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26.5513016845329"
-                    Point2="0,30.5513016845329"
-                    Point3="-4,30.5513016845329" />
-                  <mssgle:LineSegment
-                    End="-94.8333333333333,30.5513016845329" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-94.8333333333333,30.5513016845329"
-                    Point2="-98.8333333333333,30.5513016845329"
-                    Point3="-98.8333333333333,34.5513016845329" />
-                  <mssgle:LineSegment
-                    End="-98.8333333333333,67.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-149.235690104167,35.5513016845329,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="168,42"
+          Size="168,41.6"
           Id="Package\Tarea Flujo de datos\AddNewCustomer"
           TopLeft="469,329" />
         <EdgeLayout
@@ -1598,9 +1492,92 @@ where [refTable].[CustomerID] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="409.266666666667,258.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-98.6666666666666,76.2666666606399"
+              Start="0,0"
+              End="-98.6666666666666,68.7666666606399">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.0681390568496" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.0681390568496"
+                    Point2="0,31.0681390568496"
+                    Point3="-4,31.0681390568496" />
+                  <mssgle:LineSegment
+                    End="-94.6666666666666,31.0681390568496" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-94.6666666666666,31.0681390568496"
+                    Point2="-98.6666666666666,31.0681390568496"
+                    Point3="-98.6666666666666,35.0681390568496" />
+                  <mssgle:LineSegment
+                    End="-98.6666666666666,68.7666666606399" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-149.152356770833,36.0681390568496,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
+          TopLeft="577,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-147.5,104"
+              Start="0,0"
+              End="-147.5,96.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48"
+                    Point2="0,52"
+                    Point3="-4,52" />
+                  <mssgle:LineSegment
+                    End="-143.5,52" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-143.5,52"
+                    Point2="-147.5,52"
+                    Point3="-147.5,56" />
+                  <mssgle:LineSegment
+                    End="-147.5,96.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\LoadStagging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de datos\Origen de OLE DB">
     <Properties>
@@ -1629,19 +1606,6 @@ where [refTable].[CustomerID] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\LoadStagging">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
