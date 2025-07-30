@@ -14,7 +14,8 @@ BEGIN
 	   ,[Freight]         = sc.[Freight]
 	   ,[OrderDate]       = sc.[OrderDate] 
 	   ,[RequiredDate]    = sc.[RequiredDate]
-	   ,[ShippedDate]     = sc.[ShippedDate]	
+	   ,[ShippedDate]     = sc.[ShippedDate]
+	   ,[UnitPrice]	      = sc.[UnitPrice]
 	FROM [dbo].[FactOrders]         dc
 	INNER JOIN [staging].[Orders] sc ON (dc.[OrderID] = sc.[OrderID] AND dc.ProductID = sc.[ProductID])
 END

@@ -92,5 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\PackageConfig.data.sql" />
+    <None Include="Scripts\DimDate.data.sql" />
   </ItemGroup>
 </Project>
