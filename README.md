@@ -131,26 +131,26 @@ El equipo de marketing desea conocer la recurrencia de compras de clientes por s
 2. **Transformación** y mapeo a formato de Data Warehouse
 3. **Carga** en tablas dimensionales y tabla de hechos
 
+<img width="600" height="800" alt="image" src="https://github.com/user-attachments/assets/13655aaa-f487-417a-9ea3-c491953f0707" />
+
 
 ## Instrucciones para ejecución local
 
-1. Abrir `NorthWind.sln` en Visual Studio 2022
-2. Restaurar base de datos OLTP:
-   - Ejecutar los scripts de la carpeta `NorthWindOLTP/Schema/Tables`
-3. Crear base de datos DW:
-   - Compilar y publicar desde `NorthWindDW.sqlproj`
-4. Ejecutar scripts:
-   - `Scripts/DimDate.data.sql`
-   - `Scripts/PackageConfig.data.sql`
-5. Ejecutar paquetes ETL:
+1. Restaurar base de datos OLTP en SQL Server:
+   - Restaurar el archivo de base de datos `NorthWind.bak`
+2. Abrir `NorthWind.sln` en Visual Studio 2022
+3. Compilar y Publicar el proyecto `NorthWind`
+4. Crear base de datos NorthWindDW en SQL Server
+5. Compilar y publicar desde `NorthWindDW.sqlproj`
+6. Ejecutar paquetes ETL:
    - Abrir `RunETL.dtsx` y presionar **Iniciar depuración**
-6. Visualizar el reporte en:
-   - `NorthWind.pbix`
+7. Visualizar el reporte en PowerBI:
+   - Abrir el archivo `NorthWind.pbix`
 
 ## Autores
 
 Juan Carlos Torrico Rios  
 Carlos Marcelo Cruz Cruz  
-Rene Pacheco  
+Rene Guillermo Pacheco Camacho
 Christian Marcelo Tola Pacheco  
 Pablo Baldiviezo Colque
