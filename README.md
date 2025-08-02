@@ -148,9 +148,8 @@ El equipo de marketing desea conocer la recurrencia de compras de clientes por s
    - Abrir el archivo `NorthWind.pbix`
 
 ## Autores
-
-Juan Carlos Torrico Rios  
-Carlos Marcelo Cruz Cruz  
-Rene Guillermo Pacheco Camacho
-Christian Marcelo Tola Pacheco  
-Pablo Baldiviezo Colque
+* Juan Carlos Torrico Rios  
+* Carlos Marcelo Cruz Cruz  
+* Rene Guillermo Pacheco Camacho
+* Christian Marcelo Tola Pacheco  
+* Pablo Baldiviezo Colque
