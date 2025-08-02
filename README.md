@@ -77,8 +77,10 @@ El equipo de marketing desea conocer la recurrencia de compras de clientes por s
 
 ## Autores
 
-Juan Carlos Torrico Rios
-Carlos Marcelo Cruz Cruz
-Rene Pacheco
-Christian Marcelo Tola Pacheco
+## Autores
+
+Juan Carlos Torrico Rios  
+Carlos Marcelo Cruz Cruz  
+Rene Pacheco  
+Christian Marcelo Tola Pacheco  
 Pablo Baldiviezo Colque
