@@ -22,6 +22,68 @@ La estructura del proyecto contiene:
 
 ## Estructura del Proyecto
 
+NorthWind Business Intelligence Project  
+├── .gitignore  
+├── NorthWind  # Estructuración de la solución  
+│   ├── NorthWindOLTP  
+│   │   ├── Schema  
+│   │   │   ├── Programmability  
+│   │   │   │   └── Stored Procedures  
+│   │   │   │       ├── GetCustomerChangesByRowVersion.sql  
+│   │   │   │       ├── GetDatabaseRowVersion.sql  
+│   │   │   │       ├── GetEmployeeChangesByRowVersion.sql  
+│   │   │   │       ├── GetOrdersChangesByRowVersion.sql  
+│   │   │   │       ├── GetProductChangesByRowVersion.sql  
+│   │   │   │       └── GetShipperChangesByRowVersion.sql  
+│   │   │   └── Tables  
+│   │   │       ├── Categories.sql  
+│   │   │       ├── CustomerCustomerDemo.sql  
+│   │   │       ├── CustomerDemographics.sql  
+│   │   │       ├── Customers.sql  
+│   │   │       ├── EmployeeTerritories.sql  
+│   │   │       ├── Employees.sql  
+│   │   │       ├── OrderDetails.sql  
+│   │   │       ├── Orders.sql  
+│   │   │       ├── Products.sql  
+│   │   │       ├── Region.sql  
+│   │   │       ├── Shippers.sql  
+│   │   │       ├── Suppliers.sql  
+│   │   │       └── Territories.sql  
+│   ├── NorthWind.sln  
+│   └── NorthWind.sqlproj  
+├── NorthWindDW  # Data Warehouse de SQL Server  
+│   ├── NorthWindDW.sqlproj  
+│   ├── Schema  
+│   │   ├── Programmability  
+│   │   │   └── Stored Procedures  
+│   │   │       ├── DW_MergeDimCustomer.sql  
+│   │   │       ├── DW_MergeDimEmployee.sql  
+│   │   │       ├── DW_MergeDimProduct.sql  
+│   │   │       ├── DW_MergeDimShipper.sql  
+│   │   │       ├── DW_MergeFactOrders.sql  
+│   │   │       ├── GetLastPackageRowVersion.sql  
+│   │   │       └── UpdateLastPackageRowVersion.sql  
+│   │   └── Security  
+│   │       └── schemas  
+│   │           └── staging.sql  
+│   └── Scripts  # Scripts de carga de datos  
+│       ├── DimDate.data.sql  
+│       ├── PackageConfig.data.sql  
+│       ├── PatchDimDate.data.sql  
+│       ├── Script.PostDeployment.sql  
+│       └── FactOrders.sql  
+├── NorthwindETL  # Contiene los paquetes SSIS (.dtsx)  
+│   ├── DimCustomer.dtsx  
+│   ├── DimEmployee.dtsx  
+│   ├── DimProduct.dtsx  
+│   ├── DimShipper.dtsx  
+│   ├── FactOrders.dtsx  
+│   └── RunETL.dtsx  
+├── NorthwindOLAP  # Contiene el modelo OLAP (.bim)  
+│   └── NorthwindCube.bim  
+├── PowerBI/  # Reporte de visualización interactiva (.pbix)  
+│   └── NorthWind.pbix  
+└── README.md
 
 
 ## Tablas en el Data Warehouse
