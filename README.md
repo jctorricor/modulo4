@@ -98,6 +98,8 @@ NorthWind Business Intelligence Project
 | FactOrders     | Hechos      | Ventas realizadas con claves foráneas a las dimensiones |
 | PackageConfig  | Config      | Gestión de versiones para control incremental           |
 
+## Modelo Dimensional - NorthWind
+<img width="698" height="774" alt="image" src="https://github.com/user-attachments/assets/3ac32474-55c6-4df6-b0bb-3b96d199d3d8" />
 
 ## Reportes de Business Intelligence
 
@@ -122,6 +124,7 @@ El equipo de marketing desea conocer la recurrencia de compras de clientes por s
 2. **Transformación** y mapeo a formato de Data Warehouse
 3. **Carga** en tablas dimensionales y tabla de hechos
 
+
 ## Instrucciones para ejecución local
 
 1. Abrir `NorthWind.sln` en Visual Studio 2022
@@ -136,8 +139,6 @@ El equipo de marketing desea conocer la recurrencia de compras de clientes por s
    - Abrir `RunETL.dtsx` y presionar **Iniciar depuración**
 6. Visualizar el reporte en:
    - `NorthWind.pbix`
-
-## Autores
 
 ## Autores
 
