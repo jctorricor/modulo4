@@ -83,7 +83,7 @@ NorthWind Business Intelligence Project
 │ ├── FactOrders.dtsx
 │ └── RunETL.dtsx
 ├── NorthwindOLAP/ # Modelo OLAP
-  └── NorthwindCube.bim
+    └── NorthwindCube.bim
 
 ## Tablas en el Data Warehouse
 
