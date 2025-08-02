@@ -22,68 +22,7 @@ La estructura del proyecto contiene:
 
 ## Estructura del Proyecto
 
-NorthWind Business Intelligence Project
-├── .gitignore
-├── README.md
-├── PowerBI/ # Reporte de visualización interactiva
-│ └── NorthWind.pbix
-├── NorthWind/ # Estructuración de la solución
-│ ├── NorthWindOLTP/
-│ │ ├── Schema/
-│ │ │ ├── Programmability/
-│ │ │ │ └── Stored Procedures/
-│ │ │ │ ├── GetCustomerChangesByRowVersion.sql
-│ │ │ │ ├── GetDatabaseRowVersion.sql
-│ │ │ │ ├── GetEmployeeChangesByRowVersion.sql
-│ │ │ │ ├── GetOrdersChangesByRowVersion.sql
-│ │ │ │ ├── GetProductChangesByRowVersion.sql
-│ │ │ │ └── GetShipperChangesByRowVersion.sql
-│ │ │ └── Tables/
-│ │ │ ├── Categories.sql
-│ │ │ ├── CustomerCustomerDemo.sql
-│ │ │ ├── CustomerDemographics.sql
-│ │ │ ├── Customers.sql
-│ │ │ ├── EmployeeTerritories.sql
-│ │ │ ├── Employees.sql
-│ │ │ ├── OrderDetails.sql
-│ │ │ ├── Orders.sql
-│ │ │ ├── Products.sql
-│ │ │ ├── Region.sql
-│ │ │ ├── Shippers.sql
-│ │ │ ├── Suppliers.sql
-│ │ │ └── Territories.sql
-│ ├── NorthWind.sln
-│ └── NorthWind.sqlproj
-├── NorthWindDW/ # Data Warehouse (DW)
-│ ├── NorthWindDW.sqlproj
-│ ├── Schema/
-│ │ ├── Programmability/
-│ │ │ └── Stored Procedures/
-│ │ │ ├── DW_MergeDimCustomer.sql
-│ │ │ ├── DW_MergeDimEmployee.sql
-│ │ │ ├── DW_MergeDimProduct.sql
-│ │ │ ├── DW_MergeDimShipper.sql
-│ │ │ ├── DW_MergeFactOrders.sql
-│ │ │ ├── GetLastPackageRowVersion.sql
-│ │ │ └── UpdateLastPackageRowVersion.sql
-│ │ └── Security/
-│ │ └── schemas/
-│ │ └── staging.sql
-│ └── Scripts/ # Scripts de carga de datos
-│ ├── DimDate.data.sql
-│ ├── PackageConfig.data.sql
-│ ├── PatchDimDate.data.sql
-│ ├── Script.PostDeployment.sql
-│ └── FactOrders.sql
-├── NorthwindETL/ # Proceso ETL (paquetes SSIS)
-│ ├── DimCustomer.dtsx
-│ ├── DimEmployee.dtsx
-│ ├── DimProduct.dtsx
-│ ├── DimShipper.dtsx
-│ ├── FactOrders.dtsx
-│ └── RunETL.dtsx
-├── NorthwindOLAP/ # Modelo OLAP
-    └── NorthwindCube.bim
+
 
 ## Tablas en el Data Warehouse
 
