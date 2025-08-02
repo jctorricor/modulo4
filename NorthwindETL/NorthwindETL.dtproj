@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-NA8F41QM</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzKk/abWRtESIO3b/jktxIgAAAAACAAAAAAAQZgAAAAEAACAAAABDexxhNDpKbeqTL/HjDaMGmTkztyDJ9CFb2EODMeRkEgAAAAAOgAAAAAIAACAAAADvLZJqE7KNAVHl38q4t/9VaPaKPQKm21N/P+kV2pNuZZAAAAD+l9ISWbmEUK6Dj9tTCS/HcteufQ7oF2rgyvcldws3qi3JnoUkstzqnSyvE/kYyOE/LnIwO13NF+l/d7T9ARR902nwHBK7XAqJQHYSH4824a/tPqIQQkVC2k47zfOvrwLmqc5qa5wRS/7G12rV14R1zqzEUecqSuLGvWSWtTeT6TlTU0PfvEJgg4dTyuWTrahAAAAAo+M+balaEJUaH5AJvapLfJCG89qmosYO252FF2Ww+0jJKv47MvcfaeO58GF3VagfqV1VCzu4ROAzZMptDFyx+w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzKk/abWRtESIO3b/jktxIgAAAAACAAAAAAAQZgAAAAEAACAAAADSTPWYpSledlEsJ81EUiGefPenbKO3NJdOV5WVTBvgbgAAAAAOgAAAAAIAACAAAACJl9N40WqEYL2jI42Ow09PN+8ODYCBbn04IawjmO2pA5AAAACGTMVPldaEFI4Czv8PSYj8duQ8khTwV/CVzmof1jiX+59Yhug07XE0WuyhqN9EykSGGBvJTY0iYUwf0Rp/VvMqDqwuvBnYfPSgKgSGlXVHjfsXOJSl0H9HpWLS2oXAhfFIYzZ9r0IxtHsDd1Ik7cuODT9hKVF3Qe66uf9zloO6HcBjFlmyHaMj/6EXx5lGu8lAAAAARR6LPM6m8L+GqCBtj5/CH+1w+OZRJoP+XoQdVGLE8TnEiOEVvu0Lz3kpd3Wi5JjXIzYuIsLRLvnCy+d37G08/w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -35,6 +35,7 @@
           <SSIS:Package SSIS:Name="DimEmployee.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FactOrders.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DimShipper.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="RunETL.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -1623,6 +1624,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="RunETL.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{A72A6A1E-F888-4007-9949-6A3F1942765B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Orquestador</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{30EE09C0-EF6C-434B-B177-C3EF9EE2FDC9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
