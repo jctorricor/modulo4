@@ -107,15 +107,22 @@ Este proyecto, presenta un dashboard interactivo de Power BI responde a los sigu
 
 ### Sales Performance
 Gerencia desea analizar el rendimiento de ventas por sucursal durante las gestiones 2016 y 2017, con el objetivo de identificar patrones de crecimiento o caída en el volumen de ventas.
+<img width="2577" height="1180" alt="image" src="https://github.com/user-attachments/assets/6cc95ec5-50e0-443f-a850-c4f18bf35abb" />
+
 
 ### Product Performance
 Gerencia requiere una visualización que visibilice los productos con mayor demanda, permitiendole ajustar su disponibilidad en stock y optimizar la logística de inventarios.
 
+<img width="600" height="800" alt="image" src="https://github.com/user-attachments/assets/ff6d2c77-a8f1-4870-9bcf-a2360bf05086" />
+
+
 ### Staff Review
 El departamento de Recursos Humanos necesita evaluar el desempeño de los empleados de forma objetiva, visualizando las ventas que generan.
+<img width="2060" height="981" alt="image" src="https://github.com/user-attachments/assets/7ffc7dce-08b5-4ecb-9da6-cbcfedbe3077" />
 
 ### Customer Preference
 El equipo de marketing desea conocer la recurrencia de compras de clientes por sucursal a lo largo de la gestión, con el propósito de gestionar campañas.
+<img width="2616" height="1480" alt="image" src="https://github.com/user-attachments/assets/68d08006-5371-4b25-8eb4-91b64e896db6" />
 
 
 ## Proceso ETL
